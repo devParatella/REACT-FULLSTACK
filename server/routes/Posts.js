@@ -3,7 +3,7 @@ const router = express.Router();
 const { Posts } = require("../models/");
 
 router.get("/", (req, res) => {
-  res.json("Server is running on port 3001");
+  res.json("Server is running on");
 });
 
 router.post("/", async (req, res) => {
