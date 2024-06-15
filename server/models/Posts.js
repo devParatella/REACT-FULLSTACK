@@ -16,3 +16,10 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Post;
 };
+
+//realizar testes no postman
+// {
+//   "title": "Título do Post",
+//   "postText": "Texto do Post",
+//   "username": "Nome do Usuário"
+// }
