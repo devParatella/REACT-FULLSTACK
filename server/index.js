@@ -3,6 +3,7 @@ const app = express();
 const PORT = 3001;
 const db = require("./models");
 
+
 app.use(express.json());
 
 // Routers
