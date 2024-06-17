@@ -16,8 +16,14 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get("/", (req, res) => {
-  res.json("Server is running on port 3001");
-});
+router.get("/", async (req, res) => {
+  try{
+  const listOfPosts = await Post.findAll();
+  res.json(listOfPosts);
+}catch (error) {
+  console.error('Erro ao buscar posts:', error);
+  res.status(500).json({ error: 'Erro ao buscar posts' });
+}
+  });
 
 module.exports = router;
